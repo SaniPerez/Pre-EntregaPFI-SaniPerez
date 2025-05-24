@@ -1,3 +1,6 @@
+    /* ===================================================== */
+    /*                 RESET Y ESTILOS GENERALES             */
+    /* ===================================================== */
     * {
       margin: 0;
       padding: 0;
@@ -9,8 +12,15 @@
       line-height: 1.6;
       background-color: #f9f9f9;
       color: #333;
+      background-image: url(../media/img/Blue.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
+    /* ===================================================== */
+    /*                      ENCABEZADO                       */
+    /* ===================================================== */
     header {
       background-color: #03e9d9;
       padding: 1em;
@@ -21,12 +31,41 @@
       font-size: 2em;
     }
 
+    .encabezado {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .encabezado img {
+      width: 120px;
+      height: auto;
+      max-width: 100%;
+    }
+
+    .logo-izquierda {
+      margin-left: 2em;
+    }
+
+    .logo-derecha {
+      margin-right: 2em;
+    }
+
+    .titulos {
+      text-align: center;
+    }
+
+    /* ===================================================== */
+    /*                      NAVEGACIÓN                       */
+    /* ===================================================== */
     nav {
       background-color: #FF5733;
       display: flex;
       justify-content: center;
-      padding: 0.5em;
       flex-wrap: wrap;
+      padding: 0.5em;
     }
 
     nav a {
@@ -34,12 +73,17 @@
       margin: 0 1em;
       text-decoration: none;
       font-weight: bold;
+      padding: 10px;
     }
 
-    main {
-      padding: 2em;
+    nav a {
+      margin: 10px 0;
+      text-align: center;
     }
 
+    /* ===================================================== */
+    /*                        HERO                           */
+    /* ===================================================== */
     .hero {
       background: url('https://images.unsplash.com/photo-1601758003122-58e02f2bdf68') no-repeat center center/cover;
       height: 250px;
@@ -50,6 +94,14 @@
       font-size: 2em;
       text-shadow: 2px 2px 5px black;
       margin-bottom: 2em;
+      width: 100%;
+    }
+
+    /* ===================================================== */
+    /*                     SECCIONES                         */
+    /* ===================================================== */
+    main {
+      padding: 2em;
     }
 
     section {
@@ -60,6 +112,7 @@
     .about {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
       gap: 2em;
     }
 
@@ -71,65 +124,29 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 1em;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-      }
-
-      .hero {
-        font-size: 1.5em;
-      }
-    }
-
     .services article {
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* Centra horizontalmente el contenido */
-      text-align: center;
-      /* Opcional: centra el texto también */
-
-    }
-
-    .tamanio-perro {
-      width: 100px;
-      /* Puedes ajustar el tamaño según sea necesario */
-      margin-top: 0px;
-    }
-
-    .encabezado {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    /* Para controlar tamaño o márgenes si es necesario */
-    .encabezado img {
-      width: 120px;
-      height: auto;
-    }
-
-    .titulos {
       text-align: center;
     }
 
-    .logo-izquierda {
-      margin-left: 2em;
+    #main-quienes-somos {
+      background-color: aquamarine;
     }
 
-    .logo-derecha {
-      margin-right: 2em;
+    .section-parrafo {
+      font-weight: 500px;
     }
 
-    /*Estilos para el Formulario*/
+    .parrafo {
+      width: 60%;
+      text-align: justify;
+    }
 
+    /* ===================================================== */
+    /*                    FORMULARIO                         */
+    /* ===================================================== */
     form {
       max-width: 500px;
       padding: 20px;
@@ -168,18 +185,13 @@
       background-color: #246b45;
     }
 
-
-    /* styles.css*/
-    body {
-      background-image: url(../media/img/Blue.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    .tamanio-veterinaria {
-      width: 160px;
-      height: 130px;
+    /* ===================================================== */
+    /*                      IMÁGENES                         */
+    /* ===================================================== */
+    .tamanio-perro {
+      width: 100px;
+      /* Puedes ajustar el tamaño según sea necesario */
+      margin-top: 0px;
     }
 
     .tamanio-gato {
@@ -187,14 +199,9 @@
       height: 150px;
     }
 
-    .footer-parrafo {
-      padding-bottom: 10px;
-    }
-
-    .parrafo {
-      width: 60%;
-      text-align: justify;
-      /*background-image: url("../media/img/Golden.JPG");*/
+    .tamanio-veterinaria {
+      width: 160px;
+      height: 130px;
     }
 
     .imagen {
@@ -223,8 +230,9 @@
     }
 
     .imagenes img {
-      width: 350px;
-      height: 500px;
+      width: 100%;
+      max-width: 350px;
+      height: auto;
       object-fit: cover;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -244,21 +252,156 @@
       font-size: 24px;
       text-align: center;
       opacity: 0.6;
-      /* Suavidad del texto */
-      z-index: 2;
-      pointer-events: none;
-      /* El texto no interfiere con clics */
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-      /* Mejor visibilidad */
     }
 
-    #main-quienes-somos{
-      background-color: aquamarine;
-      
+    /* ===================================================== */
+    /*                        FOOTER                         */
+    /* ===================================================== */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
     }
 
-    .section-parrafo{
-      font-weight:500px;
+    .footer-parrafo {
+      padding-bottom: 10px;
     }
+
+    footer a {
+      color: white;
+      margin: 0 10px;
+    }
+
+    footer svg {
+      width: 36px;
+      height: 36px;
+    }
+
+    /* ===================================================== */
+    /*                     MEDIA QUERIES                     */
+    /* ===================================================== */
+     @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        padding: 1em;
+      }
+
+      .hero {
+        font-size: 1.5em;
+      }
+    }
+
+
+    @media (max-width: 600px) {
+      footer {
+        padding: 2em 1em;
+      }
+
+      footer a {
+        margin: 10px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        font-size: 1.5em;
+        height: 200px;       
+      }
+    }
+
+    @media (max-width: 600px) {
+      article {
+        flex: 1 1 100%;      
+      }
+    }
+
+    @media (max-width: 600px) {
+      .imagenes img {
+        width: 100%;      
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+    
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    /*Agregado*/
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+
+
+
 
     
